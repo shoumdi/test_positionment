@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>TicketMatch — FC GenV</title>
+    <!-- <link href="./css.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <header class="bg-green-500">
+        <nav class="flex justify-between">
+            <a href="index.htm">TicketMatch</a>
+            <div class="lg:hidden">burger</div>
+            <ul class="hidden flex-col lg:flex lg:flex-row justify-between">
+                <li>
+                    <a href="#acceuil" class="text-white hover:text-indigo-400">Acceuil</a>
+                </li>
+                <li>
+                    <a href="#matches" class="text-white hover:text-indigo-400">Matches</a>
+                </li>
+                <li>
+                    <a href="#reservations" class="text-white hover:text-indigo-400">Reservations</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="font-solid font-sm text-black">
+                Prochain match <span id="counter">(0 reserved)</span>
+            </h2>
+            <ul id="listofmatches" class="grid grid-cols-4 gap-3"></ul>
+
+        </section>
+        <section>
+            <h2>A propos du club</h2>
+            <p>description of club</p>
+        </section>
+
+        <section>
+            <h2>Reservation</h2>
+            <div class="max-w-[600px] mx-auto">
+                <form id="reservationFromulair">
+
+                    <div class="grid lg:grid-cols-2 lg:gap-3">
+                        <div class="flex flex-col">
+                            <label for="name">Nom</label>
+                            <input type="text" class="p-10 border-gray radius-sm" id="name" name="name" required>
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="email">email</label>
+                            <input type="email" class="p-10 border-gray radius-sm" id="email" name="email" required>
+                        </div>
+                    </div>
+
+
+                    <div class="flex flex-col">
+                        <label for="phone">Phone</label>
+                        <input type="number" class="p-10 border-gray radius-sm" id="phone" name="phone">
+                    </div>
+                    <div class="flex flex-col">
+                        <select id="select" name="match" class="p-10 border-gray radius-sm">
+                            <option disabled selected hidden>Select</option>
+                            <option value="1">FC GenV vs OC Youssoufia — 15/03/2026 </option>
+                            <option value="2">FC GenV vs FC Bayern — 22/03/2026 </option>
+                            <option value="3">FC GenV vs Madrid CF — 05/04/2026 </option>
+                        </select>
+                    </div>
+
+
+                    <div class="flex flex-col">
+                        <div>
+                            <label for="Tribune">Tribune</label>
+                            <input id="Tribune" type="radio" name="category" value="Tribune">
+                        </div>
+                        <div>
+                            <label for="Virage">Virage</label>
+                            <input type="radio" name="category" value="Virage">
+                        </div>
+                        <div>
+                            <label for="Pelouse">Pelouse</label>
+                            <input type="radio" name="category" value="Pelouse">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="number">nombre de tickets</label>
+                            <input type="number" class="p-10 radius-sm border-gris" max="10" min="1" name="number"
+                                id="number">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="comment">Comment</label>
+                            <textarea name="comment" class="p-10 radius-sm border-gris" id="comment"
+                                placeholder="write something here">
+                    </textarea>
+                        </div>
+                        <div>
+                            <label for="agreement">J'accepte les conditions générales</label>
+                            <input type="checkbox" name="agreement" id="agreement" required>
+                        </div>
+
+                        <input type="submit" value=" Réserver mon ticket " class="p-10 bg-green-400 hover:bg-green-800">
+
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        © 2026 FC GenV — Tous droits réservés
+    </footer>
+
+    <script src="./app.ts" type="module" ></script>
+
+</body>
+
+</html>

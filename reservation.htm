@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Reservation</title>
+</head>
+
+<body>
+    <div>
+        <form>
+            <div>
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div>
+                <label for="email">email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="phone">Phone</label>
+                <input type="number" id="phone" name="phone" required>
+            </div>
+
+            <select name="match">
+                <option disabled selected hidden>Select</option>
+                <option value="0">FC GenV vs OC Youssoufia — 15/03/2026 </option>
+                <option value="1">FC GenV vs FC Bayern — 22/03/2026 </option>
+                <option value="2">FC GenV vs Madrid CF — 05/04/2026 </option>
+            </select>
+
+            <div>
+                <div>
+                    <label for="Tribune">Tribune</label>
+                    <input id="Tribune" type="radio" name="category" value="Tribune">
+                </div>
+                <div>
+                    <label for="Virage">Virage</label>
+                    <input type="radio" name="category" value="Virage">
+                </div>
+                <div>
+                    <label for="Pelouse">Pelouse</label>
+                    <input type="radio" name="category" value="Pelouse">
+                </div>
+                <div>
+                    <label for="number">nombre de tickets</label>
+                    <input type="number" max="10" min="1" name="number" id="number">
+                </div>
+                <div>
+                    <label for="comment">Comment</label>
+                    <textarea name="comment" id="comment" placeholder="write something here">
+                    </textarea>
+                </div>
+                <div>
+                    <label for="agreement">J'accepte les conditions générales</label>
+                    <input type="checkbox" name="agreement" id="agreement" required>
+                </div>
+
+                <input type="submit" value=" Réserver mon ticket ">
+
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
